@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import CommandPalette from '@/components/CommandPalette';
 import ScrollProgress from '@/components/ScrollProgress';
 import ProjectCard from '@/components/ProjectCard';
-import { Github, Linkedin, Mail, Twitter, Send, Download, Code2, Palette, Rocket, Database } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Send, Download, Code2, Palette, Rocket, Database, Server, Smartphone, Boxes, GitBranch, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -29,43 +29,47 @@ const Index = () => {
   }, []);
 
   const skills = [
+    { name: 'Flutter & Dart', icon: Smartphone, color: 'cyan-accent' },
+    { name: 'C# & .NET Core', icon: Code2, color: 'purple-accent' },
     { name: 'React', icon: Code2, color: 'cyan-accent' },
     { name: 'TypeScript', icon: Code2, color: 'cyan-accent' },
-    { name: 'Node.js', icon: Database, color: 'success' },
-    { name: 'Tailwind CSS', icon: Palette, color: 'purple-accent' },
-    { name: 'Next.js', icon: Rocket, color: 'cyan-accent' },
-    { name: 'PostgreSQL', icon: Database, color: 'success' },
-    { name: 'GraphQL', icon: Code2, color: 'purple-accent' },
-    { name: 'Docker', icon: Rocket, color: 'cyan-accent' },
+    { name: 'PHP', icon: Server, color: 'success' },
+    { name: 'SQL & Databases', icon: Database, color: 'success' },
+    { name: 'RESTful APIs', icon: Zap, color: 'purple-accent' },
+    { name: 'Stencil.js', icon: Boxes, color: 'cyan-accent' },
+    { name: 'Swift', icon: Smartphone, color: 'purple-accent' },
+    { name: 'Xamarin', icon: Smartphone, color: 'cyan-accent' },
+    { name: 'Docker', icon: Boxes, color: 'success' },
+    { name: 'Git', icon: GitBranch, color: 'cyan-accent' },
   ];
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with real-time inventory management, payment processing, and analytics dashboard.',
+      title: '1Gov - Government Services Portal',
+      description: 'Large-scale web and mobile platform for Botswana government services. Built FormBuilder tool with custom validation, integrated Gleap for support, and developed reusable UI components using Stencil.js.',
       image: project1,
-      techStack: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      impact: '50% increase in conversion rate',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      techStack: ['Flutter', 'Stencil.js', 'Storybook', 'Gleap'],
+      impact: 'Serves thousands of citizens',
+      githubUrl: '',
+      liveUrl: 'https://1gov.gov.bw',
     },
     {
-      title: 'AI Analytics Dashboard',
-      description: 'Machine learning-powered analytics platform with predictive insights and real-time data visualization.',
+      title: 'Kalafhi Medical Systems',
+      description: 'Comprehensive suite of internal systems including Leave Application, Loyalty Rewards, Employee Management, Patient Data Analysis, and Credit/Loan systems for medical procedures across 4 facilities.',
       image: project2,
-      techStack: ['Next.js', 'Python', 'TensorFlow', 'D3.js'],
-      impact: 'Processing 1M+ data points daily',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      techStack: ['ASP.NET MVC', 'C#', 'SQL', 'RESTful APIs'],
+      impact: 'Cost reduction & automation',
+      githubUrl: '',
+      liveUrl: 'https://kalafhi.co.bw',
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative project management tool with real-time updates, team chat, and advanced workflow automation.',
+      title: 'Freelance Web Solutions',
+      description: 'Developed responsive websites for Gentle Hands (blog & CMS) and Direct Capital (financial services). Built secure PHP APIs, implemented email communications, and created user-friendly interfaces.',
       image: project3,
-      techStack: ['TypeScript', 'React', 'Firebase', 'WebSockets'],
-      impact: '10K+ active users',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      techStack: ['PHP', 'JavaScript', 'SQL', 'HTML5', 'CSS'],
+      impact: 'Multiple client projects',
+      githubUrl: '',
+      liveUrl: 'https://gentle-hands.co.bw',
     },
   ];
 
@@ -105,12 +109,17 @@ const Index = () => {
             </div>
 
             <h1 className="text-hero text-gradient font-heading">
-              Full-Stack Developer
+              Tshepho Khame
             </h1>
 
             <p className="text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-              Crafting exceptional digital experiences with modern web technologies. 
-              Specialized in building scalable applications that users love.
+              Flutter Developer | C# .NET | Full-Stack Web Developer
+            </p>
+
+            <p className="text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+              Full-stack software developer with experience in management and leadership. 
+              Well versed in multiple development languages and frameworks, capable of creating 
+              full systems with a team or as an individual. Always ready to learn, grow, and code.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
@@ -140,7 +149,7 @@ const Index = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/tshepho-khame-6a2b2422a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-cyan-accent transition-colors duration-300"
@@ -158,7 +167,7 @@ const Index = () => {
                 <Twitter size={24} />
               </a>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:tshephokhame1@gmail.com"
                 className="text-neutral-400 hover:text-cyan-accent transition-colors duration-300"
                 aria-label="Email"
               >
@@ -184,18 +193,22 @@ const Index = () => {
             </h2>
             <div className="space-y-4 text-neutral-400 leading-relaxed">
               <p>
-                I'm a passionate full-stack developer with a keen eye for creating seamless user experiences 
-                and robust backend systems. With over 5 years of experience in web development, I've worked 
-                on everything from small startups to enterprise-level applications.
+                I'm a versatile full-stack developer with a strong foundation in both mobile and web technologies. 
+                Currently working as a Mid-Level Frontend Software Developer at PCG Software, I specialize in Flutter 
+                development while maintaining expertise in C# .NET and modern web frameworks.
               </p>
               <p>
-                My journey in tech started with a curiosity about how things work under the hood. Today, 
-                I specialize in React, Node.js, and modern web technologies, always staying up-to-date 
-                with the latest industry trends and best practices.
+                My experience spans from building government-scale platforms serving thousands of users to developing 
+                custom business solutions as a freelancer. I've led teams, managed IT operations, and consistently 
+                delivered innovative solutions that cut costs and improve user experience. Whether it's crafting 
+                responsive web applications, developing mobile apps, or architecting backend systems, I bring a 
+                unique blend of technical skill and management experience to every project.
               </p>
               <p>
-                When I'm not coding, you'll find me contributing to open-source projects, writing technical 
-                articles, or exploring new technologies to add to my toolkit.
+                I'm passionate about creating elegant, efficient solutions and thrive in environments that challenge 
+                me to learn new technologies—from quickly picking up React during a hackathon (where I secured 2nd place 
+                competing against 40+ teams) to mastering Stencil.js for government-wide design systems. Let's build 
+                something impactful together.
               </p>
             </div>
           </div>
@@ -335,7 +348,7 @@ const Index = () => {
       <footer className="border-t border-primary/10 py-8">
         <div className="container-custom">
           <div className="text-center text-neutral-600 text-sm font-code">
-            <p>© 2024 Developer Portfolio. Built with React + TypeScript + Tailwind CSS</p>
+            <p>© 2024 Tshepho Khame. Built with React + TypeScript + Tailwind CSS</p>
             <p className="mt-2">Press <span className="text-cyan-accent">/</span> to open command palette</p>
           </div>
         </div>
